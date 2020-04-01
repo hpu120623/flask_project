@@ -29,11 +29,6 @@ class RegexConverter(BaseConverter):
         # 将正则表达式的参数保存到对象的属性中，flask会去使用这个属性来进行路由的正则表达式
         self.regex = regex
 
-<<<<<<< Updated upstream
-# 2.将自定义的转换器添加到flask的应用中
-app.url_map.converters["re"] = RegexConverter
-=======
-<<<<<<< Updated upstream
     def to_python(self, value):
         print('to_python方法被调用')
         # return '110'
@@ -47,25 +42,6 @@ app.url_map.converters["re"] = RegexConverter
 
 # # 2.将自定义的转换器添加到flask的应用中
 app.url_map.converters['re'] = RegexConverter
-
-
-# 3.使用
-# 127.0.0.1::5000/send/13312345678
-@app.route('/send/<re(r"1[34578]\d{9}"):mobile>')
-def send_sms(mobile):
-    return 'send sms to %s' % mobile
-=======
-    # 自己定义转换操作后的输出
-    def to_python(self, value):
-        return 'Hello Python'
-
-    def to_url(self, value):
-        pass
-
-# 2.将自定义的转换器添加到flask的应用中
-app.url_map.converters["re"] = RegexConverter
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
 # 127.0.0.1:5000/send/13213869866
 @app.route("/send/<re(r'1[34578]\d{9}'):mobile>")
