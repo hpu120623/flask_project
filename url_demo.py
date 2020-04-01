@@ -4,10 +4,10 @@
 Author: Amos.Li
 Email: hpu120623@gmail.com
 
-date: 2019/10/31 10:05
+date: 2019/10/30 18:39
 '''
 
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, redirect, url_for
 
 # 创建flask的应用对象
 # __name__表示当前的模块名字
@@ -55,7 +55,7 @@ def register():
 
 
 if __name__ == '__main__':
-    # 通过url_map可以查看真个flask中的路由信息
+    # 通过url_map可以查看整个flask中的路由信息
     print(app.url_map)
     # 启动flask程序
     app.run(debug=True)
